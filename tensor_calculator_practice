@@ -1,0 +1,53 @@
+import torch
+import random
+
+
+# First thing download and import Pytorch's library and random
+
+class Calculating_tensors:  # A class called tensor_calculator that received 2 two tensors that are the class's
+    # attributes
+    def __init__(self):
+        return None
+
+    def return_all_zeros_tensors(dim_1, dim_2):
+        # return all zeros tensors method is created , this will return a tensor with 2 dimensions full of zeros
+        tensor1 = torch.zeros([dim_1, dim_2])
+        return tensor1
+
+    def return_all_ones_tensors(dim_1, dim_2):
+        # return all ones tensors method is created , this will return a tensor with 2 dimensions full of ones,
+        tensor2 = torch.ones([dim_1, dim_2])
+        return tensor2
+
+    def tensor_random_values(self):  # method to return a tensor with 2 random values each time it is executed
+        tensor1 = torch.rand(2)
+        return tensor1
+
+    def add_two_tensors(tensor1, tensor2):  # addition of two tensors with 2 dimmensions
+        return torch.tensor(tensor1) + torch.tensor(tensor2)
+
+    def substract_two_tensors(tensor1, tensor2):  # substraction of two tensors with 2 dimmensions
+        return torch.tensor(tensor1) - torch.tensor(tensor2)
+
+    def multiply_tensors(tensor1, tensor2):  # multiplication of two tensors with 2 dimmensions
+        return torch.tensor(tensor1) * torch.tensor(tensor2)
+
+    def square_tensor(tensor1):  # squaring a tensor with 2 dimmensions
+        return torch.tensor(tensor1) ** 2
+
+
+# Examples to try out each method
+return_zeros = Calculating_tensors.return_all_zeros_tensors(1, 2)
+return_ones = Calculating_tensors.return_all_ones_tensors(1, 2)
+return_random = Calculating_tensors.tensor_random_values(2)
+addition = Calculating_tensors.add_two_tensors([1, 2, 3], [2, 3, 4])
+substract = Calculating_tensors.substract_two_tensors([5, 4, 3], [4, 1, 2])
+multiplication = Calculating_tensors.multiply_tensors([2, 6, 7], [6, 8, 5])
+square = Calculating_tensors.square_tensor([3, 4, 9])
+print(return_zeros)
+print(return_ones)
+print(return_random)
+print(addition)
+print(substract)
+print(multiplication)
+print(square)
